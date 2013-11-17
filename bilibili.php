@@ -19,6 +19,7 @@ class bilibili implements Typecho_Plugin_Interface{
 		//离线浏览器都是所见即所得模式
 		Typecho_Plugin::factory('Widget_XmlRpc')->fromOfflineEditor = array('bilibili', 'toCodeEditor');
 		/** 前端输出处理接口 */
+		Typecho_Plugin::factory('Widget_Abstract_Contents')->excerptEx = array('bilibili', 'parse');
 		Typecho_Plugin::factory('Widget_Abstract_Contents')->contentEx = array('bilibili', 'parse');
 	}
 	/**
